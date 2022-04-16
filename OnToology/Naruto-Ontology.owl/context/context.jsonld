@@ -1,0 +1,115 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "urn:absolute:Naruto#belongsTo",
+      "@type" : "@id"
+    },
+    "Sharingan" : {
+      "@id" : "urn:absolute:Naruto#Sharingan"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "Shadow" : {
+      "@id" : "urn:absolute:Naruto#Shadow"
+    },
+    "Taijutsu" : {
+      "@id" : "urn:absolute:Naruto#Taijutsu"
+    },
+    "Genjutsu" : {
+      "@id" : "urn:absolute:Naruto#Genjutsu"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Wind" : {
+      "@id" : "urn:absolute:Naruto#Wind"
+    },
+    "Character" : {
+      "@id" : "urn:absolute:Naruto#Character"
+    },
+    "Ninja" : {
+      "@id" : "urn:absolute:Naruto#Ninja"
+    },
+    "DoeJutsu" : {
+      "@id" : "urn:absolute:Naruto#DoeJutsu"
+    },
+    "Lightning" : {
+      "@id" : "urn:absolute:Naruto#Lightning"
+    },
+    "Light" : {
+      "@id" : "urn:absolute:Naruto#Light"
+    },
+    "Fire" : {
+      "@id" : "urn:absolute:Naruto#Fire"
+    },
+    "Water" : {
+      "@id" : "urn:absolute:Naruto#Water"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "Clone" : {
+      "@id" : "urn:absolute:Naruto#Clone"
+    },
+    "Earth" : {
+      "@id" : "urn:absolute:Naruto#Earth"
+    },
+    "madeOf" : {
+      "@id" : "urn:absolute:Naruto#madeOf",
+      "@type" : "@id"
+    },
+    "Byakugan" : {
+      "@id" : "urn:absolute:Naruto#Byakugan"
+    },
+    "Senjutsu" : {
+      "@id" : "urn:absolute:Naruto#Senjutsu"
+    },
+    "Ninjutsu" : {
+      "@id" : "urn:absolute:Naruto#Ninjutsu"
+    },
+    "Jutsu" : {
+      "@id" : "urn:absolute:Naruto#Jutsu"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Summon" : {
+      "@id" : "urn:absolute:Naruto#Summon"
+    },
+    "Clan" : {
+      "@id" : "urn:absolute:Naruto#Clan"
+    },
+    "Rinnengan" : {
+      "@id" : "urn:absolute:Naruto#Rinnengan"
+    },
+    "Rasengan" : {
+      "@id" : "urn:absolute:Naruto#Rasengan"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "howManyElementHas" : {
+      "@id" : "urn:absolute:Naruto#howManyElementHas",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "Chidori" : {
+      "@id" : "urn:absolute:Naruto#Chidori"
+    },
+    "isBloodlineLimited" : {
+      "@id" : "urn:absolute:Naruto#isBloodlineLimited",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "use" : {
+      "@id" : "urn:absolute:Naruto#use",
+      "@type" : "@id"
+    },
+    "Element" : {
+      "@id" : "urn:absolute:Naruto#Element"
+    }
+  }
+}
