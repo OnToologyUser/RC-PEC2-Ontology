@@ -1,0 +1,844 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:Naruto#"
+     xml:base="urn:absolute:Naruto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:Naruto="urn:absolute:Naruto#">
+    <owl:Ontology rdf:about="urn:absolute:Naruto">
+        <owl:versionIRI rdf:resource="urn:absolute:Naruto"/>
+        <rdfs:comment>Author: Juan Antonio Gómez Tacoronte</rdfs:comment>
+        <rdfs:label>Naruto (Series)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- urn:absolute:Naruto#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Naruto#belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Naruto#Character"/>
+        <rdfs:range rdf:resource="urn:absolute:Naruto#Clan"/>
+        <rdfs:comment>Propiedad que indica que un personaje pertenece a un clan</rdfs:comment>
+        <rdfs:label>belongsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Naruto#madeOf -->
+
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Naruto#madeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:range rdf:resource="urn:absolute:Naruto#Element"/>
+        <rdfs:comment>Propiedad que indica de que elemento esta hecho un jutsu (No todos los jutsus tienen elemento)</rdfs:comment>
+        <rdfs:label>madeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Naruto#use -->
+
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Naruto#use">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Naruto#Character"/>
+        <rdfs:range rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:comment>Propiedad que indica que un personaje puede utilizar un Jutsu</rdfs:comment>
+        <rdfs:label>use</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- urn:absolute:Naruto#howManyElementHas -->
+
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:Naruto#howManyElementHas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Naruto#Element"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Propiedad que indica de cuantos elementos primordiales esta compuesto un elemento</rdfs:comment>
+        <rdfs:label>howManyElementHas</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:Naruto#isBloodlineLimited -->
+
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:Naruto#isBloodlineLimited">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Propiedad que indica si un jutsu tiene limitado su aprendizaje por herencia de linaje o puede ser aprendido mediante entrenamiento</rdfs:comment>
+        <rdfs:label>isBloodlineLimited</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- urn:absolute:Naruto#Byakugan -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Byakugan">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#DoeJutsu"/>
+        <rdfs:label>Byakugan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Character -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Character">
+        <rdfs:label>Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Chidori -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Chidori">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Ninjutsu"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Clan -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Clan">
+        <rdfs:label>Clan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Clone -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Clone">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Ninjutsu"/>
+        <rdfs:label>Clone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#DoeJutsu -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#DoeJutsu">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:label>DoeJutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Earth -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Earth">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Element"/>
+        <rdfs:label>Earth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Element -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Element">
+        <rdfs:label>Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Fire -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Fire">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Element"/>
+        <rdfs:label>Fire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Genjutsu -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Genjutsu">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:label>Genjutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Jutsu -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Jutsu">
+        <rdfs:label>Jutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Light -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Light">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Element"/>
+        <rdfs:label>Light</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Lightning -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Lightning">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Ninja -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Ninja">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Character"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:Naruto#use"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="urn:absolute:Naruto#Jutsu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ninja</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Ninjutsu -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Ninjutsu">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:label>Ninjutsu</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Ninjutsu</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Rasengan -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Rasengan">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Ninjutsu"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Rinnengan -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Rinnengan">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#DoeJutsu"/>
+        <rdfs:label>Rinnengan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Senjutsu -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Senjutsu">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:label>Senjutsu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Shadow -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Shadow">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Element"/>
+        <rdfs:label>Shadow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Sharingan -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Sharingan">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#DoeJutsu"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Summon -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Summon">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Ninjutsu"/>
+        <rdfs:label>Summon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Taijutsu -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Taijutsu">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Jutsu"/>
+        <rdfs:label>Taijutsu</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Taijutsu</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Water -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Water">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Naruto#Wind -->
+
+
+    <owl:Class rdf:about="urn:absolute:Naruto#Wind">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Naruto#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- urn:absolute:Naruto#Chidori -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Chidori">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Chidori"/>
+        <madeOf rdf:resource="urn:absolute:Naruto#Lightning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Haku -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Haku">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Ninja"/>
+        <belongsTo rdf:resource="urn:absolute:Naruto#Yuki"/>
+        <use rdf:resource="urn:absolute:Naruto#Ice_Mirror"/>
+        <use rdf:resource="urn:absolute:Naruto#Water_Clone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Himawari -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Himawari">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Character"/>
+        <belongsTo rdf:resource="urn:absolute:Naruto#Uzumaki"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Ice -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Ice">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Water"/>
+        <rdf:type rdf:resource="urn:absolute:Naruto#Wind"/>
+        <howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Ice_Mirror -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Ice_Mirror">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Ninjutsu"/>
+        <madeOf rdf:resource="urn:absolute:Naruto#Ice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Kirin -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Kirin">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Chidori"/>
+        <madeOf rdf:resource="urn:absolute:Naruto#Lightning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Lightning -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Lightning">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Lightning"/>
+        <howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Mangekyo_Sharingan -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Mangekyo_Sharingan">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Sharingan"/>
+        <isBloodlineLimited rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBloodlineLimited>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Naruto -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Naruto">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Ninja"/>
+        <belongsTo rdf:resource="urn:absolute:Naruto#Uzumaki"/>
+        <use rdf:resource="urn:absolute:Naruto#Odama_Rasengan"/>
+        <use rdf:resource="urn:absolute:Naruto#Rasengan"/>
+        <use rdf:resource="urn:absolute:Naruto#Rasenshuriken"/>
+        <use rdf:resource="urn:absolute:Naruto#Shadow_Clone"/>
+        <rdfs:comment>Protagonista de la serie, Naruto Uzumaki</rdfs:comment>
+        <rdfs:label>Naruto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Odama_Rasengan -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Odama_Rasengan">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Rasengan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Rasengan -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Rasengan">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Rasengan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Rasenshuriken -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Rasenshuriken">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Rasengan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Sasuke -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Sasuke">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Ninja"/>
+        <belongsTo rdf:resource="urn:absolute:Naruto#Uchiha"/>
+        <use rdf:resource="urn:absolute:Naruto#Chidori"/>
+        <use rdf:resource="urn:absolute:Naruto#Kirin"/>
+        <use rdf:resource="urn:absolute:Naruto#Mangekyo_Sharingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Shadow_Clone -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Shadow_Clone">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Clone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Sharingan -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Sharingan">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Sharingan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Uchiha -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Uchiha">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Clan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Uzumaki -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Uzumaki">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Clan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Water -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Water">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Water"/>
+        <howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Water_Clone -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Water_Clone">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Clone"/>
+        <madeOf rdf:resource="urn:absolute:Naruto#Water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Wind -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Wind">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Wind"/>
+        <howManyElementHas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</howManyElementHas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Naruto#Yuki -->
+
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Naruto#Yuki">
+        <rdf:type rdf:resource="urn:absolute:Naruto#Clan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:absolute:Naruto#Chidori">
+        <rdfs:label>Chidori</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:Naruto#Lightning">
+        <rdfs:label>Lightning</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:Naruto#Rasengan">
+        <rdfs:label>Rasengan</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:Naruto#Sharingan">
+        <rdfs:label>Sharingan</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:Naruto#Water">
+        <rdfs:label>Water</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:Naruto#Wind">
+        <rdfs:label>Wind</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:Naruto#Byakugan"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Rinnengan"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Sharingan"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:Naruto#Chidori"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Clone"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Rasengan"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Summon"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:Naruto#DoeJutsu"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Genjutsu"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Ninjutsu"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Senjutsu"/>
+            <rdf:Description rdf:about="urn:absolute:Naruto#Taijutsu"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>La serie nos especifica que todos los jutsus oculares estan limitados por el linaje del personaje</rdfs:comment>
+        <rdfs:label>allDoejutsusAreBloodlineLimited</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="urn:absolute:Naruto#DoeJutsu"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:Naruto#isBloodlineLimited"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Regla especificada en al serie donde indican que todos los personajes del clan Uchiha pueden utilizar el Sharingan</rdfs:comment>
+        <rdfs:label>allUchihasHaveSharingan</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:Naruto#belongsTo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:Naruto#Uchiha"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:Naruto#use"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#c"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:Naruto#Sharingan"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>En la serie especifican que todos los jutsus que se componen de 2 o mas elementos estan limitados por el linaje del personaje</rdfs:comment>
+        <rdfs:label>allMultiElementalJutsusAreBloodlineLimited</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:Naruto#madeOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="urn:absolute:Naruto#howManyElementHas"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#e"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:Naruto#isBloodlineLimited"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/j/ontologies/2022/3/untitled-ontology-3#j"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
